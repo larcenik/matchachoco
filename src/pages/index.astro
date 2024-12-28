@@ -1,32 +1,9 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
+const pageTitle = "Home Page";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-	<a href="/">Home</a>
-	<a href="/about/">About</a>
-	<a href="/blog/">Blog</a>
-		<h1>Hello, visitor!</h1>
-                <p>Welcome to my small little space here on the web! </p>
-                <p>I'm a hobbyist web dev hoping to learn more through doing, so welcome to my first actual attempt to create and deploy a website! This website will be a mix of study and play for me! &hearts;</p>
-                <p>You can expect to find my ramblings about <mark>art, design, and technology</mark> posted here, on top of links to other future websites I'd love to create.</p>
-                <br />
-                <p class="center">
-                    current status:<br />
-                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=roo" defer></script>
-                </p>
-                <br />
-                <p></p>
-                <br />
-                <p>Well, that's enough from me! Take a look around!</p>
-                <p class="center"><a href="">back to top?</a></p>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+</BaseLayout>

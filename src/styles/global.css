@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #eadab7;
+  --frame-color: #f5e8d9;
+  --accent-color: #514f16;
+  --main-color: #502c18;
+  --link-color: #8d5f48;
+  --highlight-color: #afad55;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+@font-face {
+  font-family: 'Mikiyu Font NEW-PENJI- P';
+  src: url('..\public\fonts\Mikiyu-Font-NEW-PENJI--P-.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  background-color: var(--bg-color);
+  font-family: 'Mikiyu Font NEW-PENJI- P', sans-serif;
+}
+
+html.dark {
+  background-color: var(--accent-color);
+  color: var(--frame-color);
+}
+
+.dark .nav-links a {
+  color: var(--highlight-color);
+}
+
+body {
+  color: var(--main-color);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+  /* nav styles */
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
+  
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #ff9776;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+}
