@@ -1,24 +1,21 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-pubDate: 2022-07-01
-tags: ["astro", "blogging", "learning in public"]
+title: 'Hello, World!'
+author: 'Roo'
+description: 'This is a rewrite of my first blog post.'
+pubDate: December 5, 2024
+tags: ["webdev"]
 ---
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+Today, I started to bite the bullet and finally learn how to make websites after a decade of yearning. I used to want to be *that* tumblr girl who knew how to make themes but never really got around to it. Well, I've just decided today is that day!
 
-## What I've accomplished
+Why did I decide to learn web development? Simple. **I missed being creative**. This is just my way of being that while taking a break from using my pen and paper, hehe.
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+## Accomplishments
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+<mark>Reviewed HTML/CSS:</mark> First I coded my website from scratch to get a gist of the basics again. (Tough work!)
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+<mark>Made Pixel Art:</mark> Not only did I want to make a website, I wanted to make *sozai* so people could take some and use for their own websites to look cute. I have yet to release them but one of these days I will!
 
-## What's next
+<mark>Learning about iframes:</mark> I snooped around neocities and it seems to be common to use iframes to craft pages. I really want to learn other ways to make pages without going crazy, haha. Surely there is another way...? <span class="mikiyu">(;v;)</span>
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+## 

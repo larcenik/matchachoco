@@ -1,12 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
-author: Astro Learner
-description: "I had some challenges, but asking in the community really helped!"
-image:
-    url: "https://docs.astro.build/assets/rays.webp"
-    alt: "The Astro logo on a dark background with rainbow rays."
-pubDate: 2022-07-15
-tags: ["astro", "learning in public", "setbacks", "community"]
+title: 'On the topic of rebranding, self-development, and Matcha Lattes'
+author: 'Roo'
+description: 'There is nothing more scary than a need to change.'
+pubDate: December 30, 2024
+tags: ["self-development"]
 ---
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
+I've been at a crossroads for some time now. Possibly for years. Decades. I've been standing right here for many reasons; out of fear, 

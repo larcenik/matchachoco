@@ -3,13 +3,9 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-
-  <p>Written by: {frontmatter.author}</p>
-
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
+  <p id="date"><em>Posted on {frontmatter.pubDate}</em></p>
+  <p id="desc"><em>{frontmatter.description}</em></p>
+  
   <div class="tags">
     {frontmatter.tags.map((tag: string) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
@@ -18,22 +14,50 @@ const { frontmatter } = Astro.props;
 
   <slot />
 </BaseLayout>
+
 <style>
+  :root {
+  --bg-color: #eadab7;
+  --frame-color: #f5e8d9;
+  --accent-color: #514f16;
+  --main-color: #502c18;
+  --link-color: #8d5f48;
+  --highlight-color: #afad55;
+  }
+
+  a::before {
+    content: "♥";
+  }
+
   a {
-    color: #00539F;
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.75em;
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1em;
   }
 
   .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
+    font-family: 'Mikiyu Font NEW-PENJI- P';
+    margin: 0 0.5em 0 0;
     font-size: 1.15em;
-    background-color: #F8FCFD;
+  }
+
+  a.dark {
+   color: var(--bg-color); 
+  }
+
+  #desc {
+    font-size: 0.75em;
+    margin: 0;
+  }
+
+  #date {
+    font-size: 0.75em;
+    margin: 0;
   }
 </style>

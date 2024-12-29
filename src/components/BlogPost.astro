@@ -1,4 +1,30 @@
 ---
 const { title, url } = Astro.props;
 ---
-<li><a href={url}>{title}</a></li>
+<li class="mikiyu"><a href={url}>{title}</a></li>
+
+<style>
+:root {
+  --bg-color: #eadab7;
+  --frame-color: #f5e8d9;
+  --accent-color: #514f16;
+  --main-color: #502c18;
+  --link-color: #8d5f48;
+  --highlight-color: #afad55;
+}
+
+a {
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
+    color: var(--link-color);
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 1.25em;
+}
+
+:global(.dark) a {
+    color: var(--highlight-color);
+}
+</style>

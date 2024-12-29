@@ -2,12 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
-const pageTitle = "Blog Page";
+const pageTitle = "Blog Posts";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <h1>Hello, visitor!</h1>
-    <p>this is my blog page!</p>
 <ul>
     {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 </ul>
 </BaseLayout>
+
+<style>
+:root {
+--highlight-color: #afad55;
+}
+
+:global(.dark) a {
+  color: var(--highlight-color);
+}
+</style>

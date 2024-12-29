@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
-const pageTitle = "Home Page";
+const pageTitle = "Hello, visitor!";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <p>I'm a hobbyist web dev hoping to learn more through doing, so welcome to my first actual attempt to create and deploy a website! This website will be a mix of study and play for me!</p>
+  <p>You can expect to find my ramblings about <mark>art, design, and technology</mark> posted here, on top of links to other future websites I'd love to create.</p>
+  <br />
+  <p>Well, that's enough from me! Take a look around <span class='mikiyu'>(&hearts;^ω^&hearts;)</span></p>
 </BaseLayout>

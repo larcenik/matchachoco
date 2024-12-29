@@ -1,52 +1,87 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
-const pageTitle = "About Me";
+const pageTitle = "Hi, I'm Roo!";
 
-const identity = {
-  firstName: "Roo",
-  country: "United Kingdom",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const operatingSystem = "Linux";
-const quantity = 3;
-const footwear = "boots";
-const student = false;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
-
+const skills = ["JavaScript", "Astro", "Data Visualization"];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>... and my new Astro site!</h2>
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-    <p>Here are a few facts about me:</p>
-    <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-            }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
+    <p>There's not much to say about me but I will say this: I'm forever a student, an artist, a listener, and a dog lady.</p>
+    <p>Unsurprisingly, I love matcha and chocolate. I used to hate the color green, but I found ways to love it. It's my favorite now!</p>
+    <hr />
+    <p>Here are some other things I like:</p>
+    <div id="interests">
+      <div class="column" id="movies">
+        <h2>movies</h5>
+        <p>
+          Perfect Blue<br />
+          Paprika<br />
+          Pacific Rim<br />
+          (Everything, Everywhere, All at Once)<br />
+        </p>
+      </div>
+      <div class="column" id="games">
+        <h2>games</h5>
+        <p>
+          Baldur's Gate 3<br />
+          Hades<br />
+          Marvel Rivals<br />
+          Don't Starve<br />
+          (The House in Fata Morgana)
+        </p>
+      </div>
+      <div class="column" id="shows">
+        <h2>shows</h5>
+        <p>
+          Arcane<br />
+          Community<br />
+          <br />
+        </p>
+      </div>
+      <div class="column" id="books">
+        <h2>books</h5>
+        <p>
+          Captive Prince<br />
+          The Raven Cycle<br />
+          Maze Runner<br />
+
+        </p>
+      </div>
+    </div>
+    <hr />
+    <p>Currently I'm learning:</p>
+    <ul><span class="mikiyu">
     {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-    {finished && <p>I finished this tutorial!</p>}
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    </span></ul>
+    <br />
+    <p>I'm of the opinion that no matter where you are in life growth is always a happy little thing to have. Let this blog be a testament of that!</p>
+    <hr />
+    <p>Thanks for reading up about me!</p>
     </BaseLayout>
+
+    <style>
+      #interests {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .column {
+        padding: 0.5em;
+        margin: 0 0.5em;
+        max-width: 150px;
+      }
+
+      .column h2 {
+        margin: 0;
+        text-align: center;
+      }
+
+      .column p {
+        text-align: center;
+        font-size: 0.75em;
+        margin: 0;
+      }
+    </style>
